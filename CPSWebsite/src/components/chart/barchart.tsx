@@ -12,11 +12,11 @@ const BarChart = () => {
         label: 'Jumlah Karyawan Absen',
         data: [10, 5, 15, 7, 3],
         backgroundColor: [
-          'rgba(255, 99, 132, 0.6)', // Warna bar untuk Jakarta
-          'rgba(54, 162, 235, 0.6)', // Warna bar untuk Bandung
-          'rgba(255, 206, 86, 0.6)', // Warna bar untuk Surabaya
-          'rgba(75, 192, 192, 0.6)', // Warna bar untuk Medan
-          'rgba(153, 102, 255, 0.6)' // Warna bar untuk Bali
+          'rgba(255, 99, 132, 1)', // Warna bar untuk Jakarta
+          'rgba(54, 162, 235, 1)', // Warna bar untuk Bandung
+          'rgba(255, 206, 86, 1)', // Warna bar untuk Surabaya
+          'rgba(75, 192, 192, 1)', // Warna bar untuk Medan
+          'rgba(153, 102, 255, 1)' // Warna bar untuk Bali
         ],
         borderColor: [
           'rgba(255, 99, 132, 1)', // Border warna bar untuk Jakarta

@@ -4,7 +4,7 @@ import { BellIcon } from "@heroicons/react/24/outline";
 
 const Navbar = () => {
   return (
-    <Disclosure as="nav" className="bg-gray-800 fixed w-full z-10">
+    <Disclosure as="nav" className="bg-white shadow-md fixed w-full z-10">
      
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -17,7 +17,7 @@ const Navbar = () => {
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                     className="h-8 w-auto"
                   />
-                  <a href="#" className="text-gray-300 hover:text-white ml-4">
+                  <a href="#" className=" hover:text-white ml-4">
                     Dashboard CPS
                   </a>
                 </div>

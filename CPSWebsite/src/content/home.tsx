@@ -2,12 +2,34 @@ import Card from "../components/card";
 import BarChart from "../components/chart/barchart";
 import DropdownMenu from "../components/menu/dropdown";
 
+
+
 const Home = () => {
   const branches = ['Jakarta', 'Bandung', 'Surabaya', 'Medan', 'Bali'];
-
+  const izinData = [
+    {
+      id: 1,
+      name: 'Rangga Raditya Hariyanto',
+      startDate: '13 Juli 2024',
+      endDate: '13 Juli 2024',
+    },
+    {
+      id: 2,
+      name: 'Ahmad Fauzi',
+      startDate: '14/09/2024',
+      endDate: '15/09/2024',
+    },
+    {
+      id: 3,
+      name: 'Ahmad Fauzi',
+      startDate: '14 Juli 2024',
+      endDate: '15 Juli 2024',
+    },
+    // Tambahkan lebih banyak data jika diperlukan
+  ];
   return (
     <>
-      <div className="h-screen flex-1 p-7 " style={{ backgroundColor: 'rgba(173, 216, 230, 0.3)' }}>
+      <div className="h-screen flex-1 p-7 " >
         <h1 className="text-2xl font-semibold">Home Page</h1>
         <div className="flex flex-wrap justify-center">
           <Card
@@ -31,6 +53,7 @@ const Home = () => {
             desc="Vestibulum "
             icon="https://via.placeholder.com/300"
           />
+          
         </div>
         <div className="flex ">
           {/* Box dengan rasio 2:1 */}
@@ -80,8 +103,27 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex-shrink-0 w-1/4 h-100 bg-blue-500 m-5">
-            {/* Konten tambahan jika diperlukan */}
+          <div className="flex-shrink-0 w-1/4  bg-white  m-5 rounded-lg">
+            <div className="p-3 m-1 max-h-96 overflow-y-auto ">
+              {izinData.map((izin) => (
+                <div key={izin.id} className="w-full bg-white shadow-lg  rounded-lg mb-4">
+                  <div className="p-3">
+                    <p className="text-sm mb-2">Pengajuan Izin</p>
+                    <h2 className="text-sm font-bold -mt-1">{izin.name}</h2>
+                    <hr className="mt-1 mb-1" />
+                    <div className="flex">
+                      <h2 className="text-sm font-bold mt-2 text-green-500">Mulai:</h2>
+                      <h2 className="text-sm font-bold mt-2 ml-2 truncate">{izin.startDate}</h2>
+                      <h2 className="text-sm font-bold mt-2 ml-2 text-red-500" >Selesai:</h2>
+                      <h2 className="text-sm font-bold mt-2 ml-2 truncate">{izin.endDate}</h2>
+                    </div>
+                    <div className=" text-white px-1.5 py-1.5 mt-3 inline-block rounded-md shadow-md hover:bg-blue-600 focus:outline-none" style={{ backgroundColor: '#181059', color: '#ffffff' }}>
+                      <p className="text-sm">Lihat Selengkapnya</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
